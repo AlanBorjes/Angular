@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="miApp" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+    <title>Insertar controladorres</title>
+</head>
+<body>
+    
+    <div ng-controller="circufenrencia">
+
+        <label >Diametro</label>
+
+        <input type="text" ng-model="diametro"> <br>
+
+        <button ng-click="calcularCircuferencia()" >Calcular Circuferencia</button>
+        <br>
+        {{circuferencia}}
+    </div>
+
+
+    <script>
+        var miAplicacion = angular.module('miApp',[ ])
+
+        miAplicacion.controller('circufenrencia',['$scope',function($scope){
+        
+            var pi = 3.14
+            $scope.calcularCircuferencia = function(){
+                $scope.circuferencia  = $scope.diametro * pi
+            }
+
+        }])
+
+    </script>
+    
+</body>
+</html>

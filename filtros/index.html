@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mi tienda de verduras</h1>
+
+    <ul>
+        <li>Apio {{50 | currency}}</li>
+        <li>Brocoli {{50 | currency:"$"}}</li>
+        <li>Espinaca {{50 | currency:"$"}} importada de {{India | uppercase}}</li>
+
+    </ul>
+    
+</body>
+</html>

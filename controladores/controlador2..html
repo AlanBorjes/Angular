@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="nombreApp" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+    <title>Insertar controladorres</title>
+</head>
+<body>
+    
+    <div ng-controller="controlador1">
+
+        nombre: {{nombre}}
+    </div>
+
+    <div ng-controller="controlador2">
+        nombre: {{nombre}}
+    </div>
+
+    <script>
+        var miAplicacion = angular.module('nombreApp',[ ])
+        miAplicacion.controller('controlador1',['$scope',function($scope){
+        
+            $scope.nombre = "juan"
+        }])
+
+        miAplicacion.controller('controlador2',['$scope',function($scope){
+        
+        $scope.nombre = "Alan"
+    }])
+    </script>
+    
+</body>
+</html>
